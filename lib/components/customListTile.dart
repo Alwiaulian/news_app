@@ -14,12 +14,12 @@ Widget customListTile(Article article, BuildContext context) {
                   )));
     },
     child: Container(
-      margin: EdgeInsets.all(12.0),
-      padding: EdgeInsets.all(8.0),
+      margin: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12.0),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Colors.black12,
               blurRadius: 3.0,
@@ -33,40 +33,51 @@ Widget customListTile(Article article, BuildContext context) {
             height: 200.0,
             width: double.infinity,
             decoration: BoxDecoration(
-              //let's add the height
-
               image: DecorationImage(
                   image: NetworkImage(article.urlToImage.toString()),
                   fit: BoxFit.cover),
               borderRadius: BorderRadius.circular(12.0),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           Container(
-            padding: EdgeInsets.all(6.0),
+            padding: const EdgeInsets.all(6.0),
             decoration: BoxDecoration(
               color: Colors.red,
               borderRadius: BorderRadius.circular(30.0),
             ),
             child: Text(
               article.source!.name!,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           Text(
             article.title.toString(),
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 16.0,
             ),
-          )
+          ),
+          const SizedBox(
+            height: 8,
+          ),
+          Text(
+            'Author :  ${article.author == null ? '-' : article.author.toString()}',
+            style: const TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 16.0,
+                color: Colors.grey),
+          ),
+          const SizedBox(
+            height: 8,
+          ),
         ],
       ),
     ),
