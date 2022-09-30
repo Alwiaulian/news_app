@@ -1,8 +1,5 @@
 import 'dart:convert';
-
-// import 'package:NewsApp/model/article_model.dart';
 import 'package:http/http.dart';
-
 import '../model/article_model.dart';
 
 class ApiService {

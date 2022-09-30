@@ -33,7 +33,7 @@ class ArticlePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12.0),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8.0,
             ),
             Container(
@@ -44,17 +44,17 @@ class ArticlePage extends StatelessWidget {
               ),
               child: Text(
                 article.source!.name!,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8.0,
             ),
             Text(
               article.description.toString(),
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16.0,
               ),
